@@ -7,7 +7,7 @@ const useStyles = makeStyles(theme => ({
   paper: {
     padding: theme.spacing(1),
     margin: theme.spacing(1),
-    width: '300px',
+    width: '150px',
     cursor: 'pointer',
     display: 'flex'
   },
@@ -41,7 +41,7 @@ export const Item = ({visual, price, hasMoney, onBuyItem}) => {
     text={`Для покупки ${visual.rus} за ${price.price}р вам не хватает ${price.price - hasMoney}р`}
     />
     <Paper className={classes.paper} onClick={() => tryToBuy()} style={ price.amount === 0 ? {backgroundColor: '#F0F0F0', cursor: 'default'} : {}}>
-      <Box display="flex" flexDirection="column" justifyContent="space-between" height="100%">
+      <Box display="flex" flexDirection="column" justifyContent="space-between" width="100%">
         <Box>
           <Box display="flex" justifyContent="space-between">
             <div>{visual.icon}</div>

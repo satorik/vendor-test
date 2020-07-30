@@ -48,7 +48,7 @@ const Machine = ({ stock, moneyIn, onTakeItem, onGiveChange }) => {
           <ArrowUpwardIcon color="error" onClick={() => onGiveChange(moneyIn)} style={{cursor: 'pointer'}}/>
       </Typography>
      </Box>
-     <Box display="flex" justifyContent="space-evenly" >
+     <Box display="flex" justifyContent="space-evenly" flexWrap="wrap" >
       {Object.keys(STOCK).map(item => <Item 
         key={item}
         visual={STOCK[item]} 
