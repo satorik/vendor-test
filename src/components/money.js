@@ -32,7 +32,7 @@ export const Money = ({nom, count, onGiveMoney}) => {
     <div className={classes.root}>
       <div className={classes.nominal}>{nom}</div>
       <p className={classes.count}>({count})</p>
-      {onGiveMoney ? <ArrowForwardIcon onClick={onGiveMoney} color="primary" /> : null}
+      {(onGiveMoney && count > 0) ? <ArrowForwardIcon onClick={onGiveMoney} color="primary" /> : null}
     </div>
   )
 }
